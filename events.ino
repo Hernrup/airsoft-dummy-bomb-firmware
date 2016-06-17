@@ -96,3 +96,7 @@ void enableSiren(){
 void disableSiren(){
   digitalWrite(PIN_ALARM,LOW);
 }
+void newAtempt(){
+  nbrOfAtempts = nbrOfAtempts +1;
+}
+

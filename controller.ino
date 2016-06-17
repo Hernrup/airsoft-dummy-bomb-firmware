@@ -8,6 +8,7 @@ void controller(){
   case PRIMED:
     isMenuAllowed = 1;
     if(checkInputForValue(armCode)){
+      resetAtempts();
       setStateArmed();
     }
     displayPrimed();
@@ -23,7 +24,15 @@ void controller(){
     break;
   
   case ARMED:
+    if(!checkAtempts){
+        hours = 0;
+        minutes = 0;
+        if(seconds > 10){
+         seconds = 10;
+        }
+    }
     if(checkInputForValue(disarmCode)){
+      resetAtempts();
       setStateDisarmed();
     }
     if (hours == 0 && minutes == 0 && seconds < 11){
@@ -54,6 +63,7 @@ void controller(){
   case DISARMED:
     isMenuAllowed = 1;
     if(checkInputForValue(armCode)){
+      resetAtempts();
       setStateArmed();
     }
     displayDisarmed();
@@ -65,6 +75,7 @@ void controller(){
   case MENU_ENTRY:
     isMenuAllowed = 1;
     if(checkInputForValue(configCode)){
+      resetAtempts();
       state = MENU;
       enableDisplayUpdate();
     }

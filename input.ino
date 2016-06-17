@@ -11,6 +11,7 @@ int checkInputForValue(char* wantedCode){
       
       if(codeCount == 8){
         resetCode();
+        newAtempt();
         beepError();
         return 0;
       }

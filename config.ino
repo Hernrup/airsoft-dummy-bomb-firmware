@@ -14,6 +14,7 @@ void readConfig() {
   isRemoteDetonationAllowed = configuration.isRemoteDetonationAllowed;
   //useSiren = configuration.useSiren;
   isMuted = configuration.isMuted;
+  punishWrongDisarmCode = configuration.punishWrongDisarmCode;
 }
 void saveConfig() {
   
@@ -26,6 +27,7 @@ void saveConfig() {
   configuration.isRemoteDetonationAllowed = isRemoteDetonationAllowed;
   //configuration.useSiren = useSiren;
   configuration.isMuted = isMuted;
+  configuration.punishWrongDisarmCode = punishWrongDisarmCode;
   
   EEPROM_writeAnything(0, configuration);
   

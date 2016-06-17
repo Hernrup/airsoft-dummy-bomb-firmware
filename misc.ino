@@ -52,5 +52,6 @@ void resetTime(){
   RefreshFormatedTime();
   enableDisplayUpdate();
 }
-
-
+void resetAtempts(){
+  nbrOfAtempts = 0;
+}

@@ -90,7 +90,9 @@ boolean updateDisplaySecondary = true;
 boolean flashState = true;
 boolean beepState = false;
 int isMenuAllowed = 0;
-
+boolean punishWrongDisarmCode = true;
+int nbrOfAtempts = 0;
+int nbrOfDisarmAtemptsLimit = 3;
 /**************************
 CONFIG
 **************************/
